@@ -1,0 +1,62 @@
+// User Routes
+router.post('/user/register', registerUser);
+router.post('/user/login', loginUser);
+router.get('/user/profile/:id', getUserProfile);
+router.put('/user/profile/:id', updateUserProfile);
+router.post('/user/logout', logoutUser);
+
+// Restaurant Routes
+router.post('/restaurant', createRestaurant); // Admin only
+router.get('/restaurants', getAllRestaurants);
+router.get('/restaurant/:id', getRestaurantById);
+router.put('/restaurant/:id', updateRestaurant); // Admin only
+router.delete('/restaurant/:id', deleteRestaurant); // Admin only
+
+// Item (Menu) Routes
+router.post('/restaurant/:id/item', addItemToRestaurant); // Admin only
+router.get('/restaurant/:id/items', getAllItemsForRestaurant);
+router.get('/item/:id', getItemById);
+router.put('/item/:id', updateItem); // Admin only
+router.delete('/item/:id', deleteItem); // Admin only
+
+// Order Routes
+router.post('/order', placeOrder);
+router.get('/order/:id', getOrderById);
+router.get('/orders/user/:userId', getAllOrdersForUser);
+router.put('/order/:id', updateOrderStatus); // Admin or restaurant staff only
+router.delete('/order/:id', cancelOrder);
+
+// Cart Routes (Optional)
+router.post('/cart', addToCart);
+router.get('/cart/:userId', getCartByUserId);
+router.put('/cart/:userId', updateCart);
+router.delete('/cart/:userId/item/:itemId', removeItemFromCart);
+
+// Payment Routes (Optional)
+router.post('/payment', processPayment);
+router.get('/payment/:id', getPaymentDetails);
+router.put('/payment/:id', updatePaymentStatus);
+
+
+1.Food Ordering Application
+2.Voting Application
+3.E-Learning platform
+
+1.Projects
+2.Dev[core concept]
+3.Aptitude
+4.English Speaking
+5.Data Structure and Algorithm
+6.Core Subjects
+7.System Designe
+
+
+// update product
+// delete product
+
+// Admin
+
+// odders
+
+
+
